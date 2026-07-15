@@ -1,0 +1,74 @@
+.portfolio{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: aqua;
+}
+.portfolio h1{
+    font-size: 70px;
+    color: #fff;
+}
+.portfolio h1 span{
+    color: var(--color-principal);
+}
+.portfolio p{
+    color: #fff;
+    font-family: var(--font-inter);
+    margin-bottom: 30px;
+}
+.portfolio p span{
+    color: var(--color-principal);
+}
+.portfolio i{
+    color: var(--color-principal);
+    font-size: 27px;
+}
+.portfolio .cardse{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    right: 30px;
+    top: -5rem;
+    left: -10rem;
+}
+.portfolio .cardse .carde{
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff48;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+.portfolio .carde p{
+    font-size: 12px;
+}
+.Portfolio-section{
+    min-height: 100vh;
+    width: 100%;
+}
+.secao{
+    min-height: 100vh;
+    width: 100%;
+    perspective: 1000px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ee{
+    background-color: rgb(0, 0, 0);
+    height: 200px;
+    width: 300px;
+    
+    transform:
+        rotateY(-25deg)
+        
+        translateZ(0px);
+}
