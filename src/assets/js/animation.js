@@ -23,7 +23,6 @@ const tl = gsap.timeline({
         end: "+=3500",
         scrub: true,
         pin: true,
-        markers: true
     }
 });
 tl.to(".hero .logo-camera", {
@@ -98,14 +97,6 @@ tl.to(".hero .logo-camera", {
 }, 4)
 
 
-
-
-
-
-
-
-
-
 const time = gsap.timeline();
 time.from(".logo", {
     opacity: 0,
@@ -144,6 +135,17 @@ time.from(".logo", {
     duration: 1,
     y: 100
 }, 1.7)
-
+/*
+const portl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".Portfolio-section",
+        start: "top top",
+        end: "+=2000",
+        markers: true,
+        scrub: true,
+        pin: true
+    }
+})
+    */
 
 

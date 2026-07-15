@@ -49,26 +49,99 @@
 .portfolio .carde p{
     font-size: 12px;
 }
+/* Portifolio amostra */
 .Portfolio-section{
     min-height: 100vh;
     width: 100%;
+    background-color: #000000;
+    position: relative;
+}
+
+.bolinhas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.bolinhas .bolinha{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--color-principal);
+    box-shadow:0 0 100px var(--color-principal),0 0 100px var(--color-principal),0 0 200px var(--color-principal);
+    filter: blur(20px);
+    opacity: .4;
+}
+.boll{
+    right: 200px;
+    top: 30%;
+}
+.boll1{
+    top: 10%;
+    left: 20%;
+}
+.boll2{
+    top: 60%;
+    left: 40%;
+}
+.info-port{
+    color: #fff;
+    padding-left: 5rem;
+    padding-top: 6rem;
+    position: relative;
+    z-index: 2;
+}
+.info-port .desc{
+    display: block;
+    font-family: var(--font-inter);
+    color: var(--color-principal);
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.info-port h2{
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.info-port h2 span{
+    color: var(--color-principal);
+}
+.info-port p{
+    font-family: var(--font-Mont);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.info-port hr{
+    width: 6rem;
+    height: 2px;
+    background: linear-gradient(90deg, rgb(255, 115, 0), rgba(255, 123, 0, 0));
+    border: none;
 }
 .secao{
-    min-height: 100vh;
     width: 100%;
     perspective: 1000px;
-    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #863636;
+    height: 70vh;
 }
-.ee{
-    background-color: rgb(0, 0, 0);
+.cards-secao{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    max-width: 1400px;
+}
+.cards-secao .card-secao{
+    width: 400px;
     height: 200px;
-    width: 300px;
-    
-    transform:
-        rotateY(-25deg)
-        
-        translateZ(0px);
+    background-color: #000000;
+    border-radius: 10px;
+    border: 1px solid #ffffff48;
 }
