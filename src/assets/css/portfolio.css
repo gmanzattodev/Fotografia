@@ -55,6 +55,7 @@
     width: 100%;
     background-color: #070707;
     position: relative;
+    overflow: hidden;
 }
 
 .bolinhas{
@@ -146,6 +147,21 @@
     border: 2px solid #000000;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
+}
+.cards-secao .card-secao::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #ffffff3f,  transparent);
+    transform: skewX(-25deg);
+    transition: 0.7s;
+}
+.cards-secao .card-secao:hover::before{
+    left: 180%;
 }
 .card-secao.card1{
     background:  linear-gradient(35deg, rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.76)), url("../img/gestante.jpg") center top no-repeat; 
@@ -171,6 +187,13 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.cards-secao .card-secao:hover .info-secao{
+    opacity: 1;
+    transform: translateY(0);
 }
 .cards-secao .card-secao i{
     color: var(--color-principal);

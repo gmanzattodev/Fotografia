@@ -153,7 +153,29 @@ const portl = gsap.timeline({
     stagger: 0.4,
     y: 200
 }, 0)
-
+.to(".card-secao", {
+    opacity: 0,
+    stagger: 0.4,
+    duration: 1,
+    y: 200
+}, 4)
+.fromTo(".revelacao", {
+    opacity: 0,
+    x: -400,
+}, {
+    opacity: 1,
+    x: 0,
+    duration: 1
+}, 4.5)
+.fromTo(".maquina-revelar", {
+    opacity: 0,
+    x: 1500,
+   
+}, {
+    opacity: 1,
+    duration: 1,
+    x: 0
+}, 4.5)
 
 
 
