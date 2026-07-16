@@ -135,17 +135,28 @@ time.from(".logo", {
     duration: 1,
     y: 100
 }, 1.7)
-/*
+
+
 const portl = gsap.timeline({
     scrollTrigger: {
         trigger: ".Portfolio-section",
         start: "top top",
-        end: "+=2000",
+        end: "+=3000",
         markers: true,
         scrub: true,
         pin: true
     }
 })
-    */
+.from(".card-secao", {
+    opacity: 0,
+    duration: 1,
+    stagger: 0.4,
+    y: 200
+}, 0)
+
+
+
+
+
 
 
