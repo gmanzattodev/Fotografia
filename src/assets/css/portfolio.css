@@ -2,7 +2,6 @@
     position: absolute;
     top: 30%;
     left: 10%;
-    color: aqua;
 }
 .portfolio h1{
     font-size: 70px;
@@ -19,36 +18,7 @@
 .portfolio p span{
     color: var(--color-principal);
 }
-.portfolio i{
-    color: var(--color-principal);
-    font-size: 27px;
-}
-.portfolio .cardse{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    right: 30px;
-    top: -5rem;
-    left: -10rem;
-}
-.portfolio .cardse .carde{
-    width: 150px;
-    height: 100px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.233);
-    backdrop-filter: blur(10px);
-    border: 1px solid #ffffff48;
-    border-radius: 10px;
-    padding: 10px;
-    gap: 10px;
-}
-.portfolio .carde p{
-    font-size: 12px;
-}
+
 /* Portifolio amostra */
 .Portfolio-section{
     min-height: 100vh;

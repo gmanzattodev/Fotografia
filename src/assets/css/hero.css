@@ -1,268 +1,274 @@
-.principal{
-    background-color: #000000;
-    min-height: 100vh;
-    width: 100%;
+.principal {
+  background-color: #000000;
+  min-height: 100vh;
+  width: 100%;
 }
 
-.hero{
-    min-height: 100vh;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: relative;
-    overflow: hidden;
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
 }
-.hero h1{
-    font-family: var(--font-league);
-    font-size: clamp(1rem, 14vw, 14rem);
-    position: absolute;
-    bottom: 40px;
-    left: 16%;
-    color: transparent;
-    -webkit-text-stroke: 2px rgb(240, 96, 0);
-    transition: color 1s;
+.hero .title{
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translate(-50%);
+    width:100%;
+    display:flex;
+    justify-content:center;
+
 }
-.hero h1.fechamento{
-    color: rgba(240, 96, 0, 0.233);
-    -webkit-text-stroke: 2px rgba(240, 96, 0, 0.438);
+.hero h1 {
+  font-family: var(--font-league);
+  font-size: clamp(1rem, 14vw, 14rem);
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(240, 96, 0);
+  transition: color 1s;
 }
-.foto-titulo-2{
-    opacity: 1;
+.hero h1.fechamento {
+  color: rgba(240, 96, 0, 0.233);
+  -webkit-text-stroke: 2px rgba(240, 96, 0, 0.438);
 }
-.foto-titulo-2:hover{
-    cursor:default ;
-    color: rgba(240, 96, 0, 0.233);
+.foto-titulo-2 {
+  opacity: 1;
 }
-.info-hero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-left: 4rem;
-    gap: 20px;
+.foto-titulo-2:hover {
+  cursor: default;
+  color: rgba(240, 96, 0, 0.233);
 }
-.info-hero .container .titulo{
-    line-height: 55px;
+.info-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 4rem;
+  gap: 20px;
 }
-.info-hero .container h3{
-    font-family: var(--font-inter);
-    font-size: 55px;
-    color: #fff;
-    white-space: nowrap;
-    width: 0%;
-    overflow: hidden;
-    animation: escrever 2s steps(168) forwards
+.info-hero .container .titulo {
+  line-height: 55px;
 }
-.info-hero .container h2{
-    font-family: var(--font-inter);
-    font-size: 70px;
-    color: rgb(240, 116, 0); 
-    margin-bottom: 10px;
-    width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: escrever 2s steps(1648) forwards
+.info-hero .container h3 {
+  font-family: var(--font-inter);
+  font-size: 55px;
+  color: #fff;
+  white-space: nowrap;
+  width: 0%;
+  overflow: hidden;
+  animation: escrever 2s steps(168) forwards;
 }
-.info-hero .container p{
-    color: #fff;
-    font-family: var(--font-inter);
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 20px;
+.info-hero .container h2 {
+  font-family: var(--font-inter);
+  font-size: 70px;
+  color: rgb(240, 116, 0);
+  margin-bottom: 10px;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: escrever 2s steps(1648) forwards;
+}
+.info-hero .container p {
+  color: #fff;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 20px;
 }
 @keyframes escrever {
-    100%{
-        width: 100%;
-    }
+  100% {
+    width: 100%;
+  }
 }
 
+.btn-hero {
+  display: flex;
+  position: relative;
+  height: 50px;
+  width: 60%;
+  border-radius: 24px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border: 1px solid rgb(240, 116, 0);
+  align-items: center;
+  padding-right: 20px;
+  cursor: pointer;
+  justify-content: flex-end;
+  transition: 0.5s;
+}
+.btn-hero .seta {
+  position: absolute;
+  left: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgb(240, 116, 0);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.btn-hero.btn-active {
+  justify-content: flex-start;
+  background-color: rgb(240, 116, 0);
+  color: #000;
+  padding-left: 20px;
+  padding-right: 0;
+}
+.btn-hero .seta.seta-active {
+  background-color: #000;
+  color: rgb(240, 116, 0);
+  left: calc(100% - 46px);
+  transform: rotate(180deg);
+}
+.icons-redes {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+.icons-redes i {
+  opacity: 0;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #ffffff30;
+  color: var(--color-principal);
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+}
+.icons-redes i:hover {
+  background-color: var(--color-principal);
+  color: #000;
+}
+.sobre {
+  margin-top: 30px;
+}
+.sobre h4 {
+  font-family: var(--font-principal);
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color: var(--color-principal);
+}
+.sobre h5 {
+  color: #fff;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.sobre p {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  color: #ffffffc4;
+}
 
-.btn-hero{
-    display: flex;
-    position: relative;
-    height: 50px;
-    width: 60%;
-    border-radius: 24px;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    border: 1px solid rgb(240, 116, 0);
-    align-items: center;
-    padding-right: 20px;
-    cursor: pointer;
-    justify-content: flex-end;
-    transition: 0.5s;
+.hero .logo-camera,
+.hero .marilia-logo {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width:min(70vw,1300px);
+  filter: drop-shadow(0 0 0px rgb(240, 88, 0));
+  animation: aumentar 2s ease forwards;
 }
-.btn-hero .seta{
-    position: absolute;
-    left: 10px;
-    padding: 10px;
-    border-radius: 50%;
-    background-color: transparent;
-    color: #ffffff;
-    border: 1px solid rgb(240, 116, 0);
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-}
-.btn-hero.btn-active{
-    justify-content: flex-start;
-    background-color: rgb(240, 116, 0);
-    color: #000;
-    padding-left: 20px;
-    padding-right: 0;
-}
-.btn-hero .seta.seta-active{
-    background-color: #000;
-    color: rgb(240, 116, 0);
-    left: calc(100% - 46px);
-    transform: rotate(180deg);
-}
-.icons-redes{
-    display: flex;
-    margin-top: 10px;
-    gap: 10px;
-}
-.icons-redes i{
-    opacity: 0;
-    padding: 10px;
-    border-radius: 50%;
-    border: 1PX solid #ffffff30;
-    color: var(--color-principal);
-    cursor: pointer;
-    position: relative;
-    transition: 0.2s;
-}
-.icons-redes i:hover{
-    background-color: var(--color-principal);
-    color: #000;
-}
-.sobre{
-    margin-top: 30px;
-}
-.sobre h4{
-    font-family: var(--font-principal);
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 20px;
-    color: var(--color-principal);
-}
-.sobre h5{
-    color: #fff;
-    font-family: var(--font-inter);
-    font-weight: 500;
-    letter-spacing: 0.2px;
-}
-.sobre p{
-    font-family: var(--font-inter);
-    font-size: 12px;
-    color: #ffffffc4;
-}
-
-.hero .logo-camera, .hero .marilia-logo{
-    position: absolute;
-    top: 60%;
-    left: 60%;
-    transform: translate(-50%,-50%);
-    width: 1200px;
-    filter: drop-shadow(0 0 0px rgb(240, 88, 0));
-    animation: aumentar 2s ease forwards;
-}
-.marilia-logo{
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
+.marilia-logo {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 @keyframes aumentar {
-    100%{
-        filter: drop-shadow(0 0 180px rgb(240, 88, 0));
-    }
+  100% {
+    filter: drop-shadow(0 0 180px rgb(240, 88, 0));
+  }
 }
 
-.cards{
-    position: absolute;
-    border: 1px solid #ffffff75;
-    border-radius: 26px;
-    padding: 20px;
-    top: 50%;
-    left: 50%;
+.cards {
+  position: absolute;
+  border: 1px solid #ffffff75;
+  border-radius: 26px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
 
-    display: flex;
-    gap: 10px;
-    background-color: rgba(0, 0, 0, 0.349);
-    backdrop-filter: blur(20px);
-    animation: pass 4s ease infinite;
+  display: flex;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.349);
+  backdrop-filter: blur(20px);
+  animation: pass 4s ease infinite;
 }
 @keyframes pass {
-    0%, 100%{
-        transform: translateY(20);
-    }
-    50%{
-        transform: translateY(-9px);
-    }
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
 }
-.cards i{
-    color: var(--color-principal);
-    font-size: 25px;
+.cards i {
+  color: var(--color-principal);
+  font-size: 25px;
 }
-.cards h3{
-    font-family: var(--font-inter);
-    color: var(--color-principal);
-    letter-spacing: 1px;
-    font-size: 13px;
+.cards h3 {
+  font-family: var(--font-inter);
+  color: var(--color-principal);
+  letter-spacing: 1px;
+  font-size: 13px;
 }
-.cards p{
-    padding-top: 6px;
-    font-family: var(--font-inter);
-    color: #ffffffbd;
-    font-size: 11px;
-    letter-spacing: 0.2px;
+.cards p {
+  padding-top: 6px;
+  font-family: var(--font-inter);
+  color: #ffffffbd;
+  font-size: 11px;
+  letter-spacing: 0.2px;
 }
-.cards.card1{
-    top: 25%;
-    left: 30%;
-    animation-delay: .15s;
+.cards.card1 {
+  top: 25%;
+  left: 30%;
+  animation-delay: 0.15s;
 }
-.cards.card2{
-    top: 60%;
-    left: 35%;
-    animation-delay: 1.35s;
+.cards.card2 {
+  top: 60%;
+  left: 35%;
+  animation-delay: 1.35s;
 }
-.cards.card3{
-    top: 30%;
-    left: 80%;
-    animation-delay: 0.56s;
+.cards.card3 {
+  top: 30%;
+  left: 80%;
+  animation-delay: 0.56s;
 }
-.cards.card4{
-    top: 60%;
-    left: 70%;
-    animation-delay: 2s;
+.cards.card4 {
+  top: 60%;
+  left: 70%;
+  animation-delay: 2s;
 }
-.servicoes{
-    color: aqua;
-    position: absolute;
-    top: 40%;
-    left: 10%;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+.servicoes {
+  color: aqua;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
-.servicoes h1{
-    font-size: 70px;
-    font-weight: 300;
-    color: #fff;
-    margin-bottom: 20px;
+.servicoes h1 {
+  font-size: 70px;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 20px;
 }
-.servicoes h1 span{
-    color: var(--color-principal);
+.servicoes h1 span {
+  color: var(--color-principal);
 }
-.servicoes p{
-    color: #fff;
-    font-family: var(--font-inter);
+.servicoes p {
+  color: #fff;
+  font-family: var(--font-inter);
 }
-.servicoes p span{
-    color: var(--color-principal);
+.servicoes p span {
+  color: var(--color-principal);
 }
