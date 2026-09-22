@@ -1,3 +1,5 @@
+import galeria from "./galeria.js"
+
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const secoes = document.querySelectorAll(".secao")
@@ -160,13 +162,47 @@ buttons.forEach(button => {
         })
         button.classList.add("active")
         
-        
-
-
         const btn = button.dataset.categoria
+        
+        const categoriaFiltrado = btn === "Todos" ? galeria : galeria.filter(item => item.categoria === btn)
 
-
-    })
+        
+        renderizar(categoriaFiltrado)
+    }) 
     
+})
+
+const galerias = document.querySelector(".galeria-fotos")
+
+function renderizar(valor){
+    galerias.innerHTML = ""
+
+    for (let i = 0; i < valor.length; i++) {
+        const element = valor[i];
+        
+        galerias.innerHTML += `
+        <div class="Card">
+            <img src="${element.imgPequena}" alt="${element.name}">
+        </div>
+        
+        `
+    }
+}
+renderizar(galeria)
+
+
+const cardsImg = document.querySelectorAll(".Card img")
+const imge = document.querySelector(".Card img")
+
+gsap.from(cardsImg, {
+    opacity: 0,
+    y: 100,
+    stagger: 0.05,
+    scrollTrigger: {
+        trigger: ".galeria",
+        start: "top 40%",
+        end: "bottom 100%",
+        scrub: 2
+    }
 })
 
