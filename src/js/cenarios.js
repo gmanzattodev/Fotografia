@@ -1,0 +1,6 @@
+const cenarios = [
+    {
+        img: "",
+        text: ""
+    }
+]
