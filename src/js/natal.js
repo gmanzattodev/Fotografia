@@ -54,3 +54,12 @@ buttons.forEach((button, index) => {
         }
     })
 })
+const perguntas = document.querySelectorAll(".pergunta")
+
+perguntas.forEach((pergunta) => {
+    pergunta.addEventListener("click", () => {
+        const duvida = pergunta.closest(".duvida")
+
+        duvida.classList.toggle("active")
+    })
+})
