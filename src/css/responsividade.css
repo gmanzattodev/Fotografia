@@ -35,15 +35,31 @@
     }
     .menu .navbar.active{
         display: flex;
-    }.info-sobre{
-        background-color: rgba(0, 0, 0, 0.87);
-        margin: 0 20px;
-        text-align: center;
+    }
+    
+    .sobre{
         display: none;
     }
-    .info-contato{
-        padding: 10px 0px 10px 10px;
+    .contato{
+        padding: 10px 0px 10px 50px;
     }
+    .blogs{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .blogs .info-blogs h4 hr{
+        display: none;
+    }
+    .blogs .info-blogs h4{
+        justify-content: center;
+    }
+    .blogs .info-blogs button{
+        margin: 50px auto;
+    }
+    .artigo-cards{
+        justify-content: center;
+    }
+
     
       
 }
@@ -69,6 +85,7 @@
     }
 }
 @media screen and (max-width: 500px) {
+
     .ensaios-grid{
         grid-template-columns: repeat(1, 1fr);
     }

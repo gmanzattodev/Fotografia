@@ -71,3 +71,7 @@ function Responsividade(){
   })
 }
 Responsividade()
+
+function animacaoHero(){
+  
+}
